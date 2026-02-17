@@ -71,4 +71,3 @@ One edge case my tests do not cover
 Submission
 
 I submitted this solution as a public GitHub repository using the Google Form link provided.
-
