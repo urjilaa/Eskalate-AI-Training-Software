@@ -1,91 +1,74 @@
-# AI Experts Assignment (Python)
+AI Experts Assignment (Python)
 
-This assignment evaluates your ability to:
+In this project, I demonstrated my ability to:
 
-- set up a small Python project to run reliably (locally + in Docker),
-- pin dependencies for reproducible installs,
-- write focused tests to reproduce a bug,
-- implement a minimal, reviewable fix.
+Set up a small Python project that runs reliably both locally and in Docker
 
-## What you will do
+Pin dependencies for reproducible installs
 
-### 1) Dockerfile (required)
+Write focused tests that reproduce a bug
 
-Create a `Dockerfile` so the project can run the test suite in a non-interactive, CI-style environment.
+Implement a minimal, reviewable fix
 
-Requirements:
+What I Did
+1) Dockerfile
 
-- requirements.txt exists and is used during build (pip install -r requirements.txt)
-- pytest must be included/pinned in requirements.txt
-- The image must run tests by default (use: `CMD ["python", "-m", "pytest", "-v"]`).
-- The build must install dependencies from `requirements.txt`.
+I created a Dockerfile so the project can run the test suite in a non-interactive, CI-style environment.
 
-### 2) requirements.txt (required)
+Installed dependencies from requirements.txt
 
-Create a `requirements.txt` with pinned versions, using this format:
+Included and pinned pytest in requirements.txt
 
-- `package==x.y.z`
+Configured the container to run tests by default using:
 
-### 3) README updates (required)
+CMD ["python", "-m", "pytest", "-v"]
 
-Update this README to include:
+2) requirements.txt
 
-- how to run the tests locally,
-- how to build and run tests with Docker.
+I created a requirements.txt file with pinned package versions to ensure reproducible installs, for example:
 
-### 4) Find + fix a bug (required)
+package==x.y.z
 
-There is a bug somewhere in this repository.
+3) Running Tests
 
-Your tasks:
+Locally:
 
-- Identify the bug through reading code and/or running tests.
-- Write tests that reproduce the bug (tests should fail on the current code).
-- Apply the smallest possible fix to make the tests pass.
-- Keep the change minimal and reviewable (no refactors).
+I installed dependencies and ran the test suite:
 
-## Constraints
-
-- Keep changes minimal and reviewable.
-- Do not refactor unrelated code.
-- Do not introduce extra tooling unless required.
-- You may add tests and the smallest code change needed to fix the bug.
-
-### 5) EXPLANATION.md (required)
-
-Create `EXPLANATION.md` (max 250 words) containing:
-
-- **What was the bug?**
-- **Why did it happen?**
-- **Why does your fix solve it?**
-- **One realistic case / edge case your tests still don't cover**
-
-## Running Tests
-
-### Locally
-
-Install dependencies:
-```bash
 pip install -r requirements.txt
-```
-
-Run tests:
-```bash
 python -m pytest -v
-```
 
-### Docker
 
-Build the image:
-```bash
-docker build -t ai-experts-assignm .
-```
+With Docker:
 
-Run tests in Docker:
-```bash
-docker run ai-experts-assignm
-```
+I built the Docker image and ran tests inside the container:
 
-## Submission
+docker build -t ai-experts-assignment .
+docker run --rm ai-experts-assignment
 
-- Submit a public GitHub repository URL containing your solution to the Google form link provided.
+4) Finding and Fixing a Bug
+
+I identified a bug in the code by analyzing the logic and running tests
+
+I wrote tests that reproduced the bug (these failed on the original code)
+
+I applied the smallest possible fix to make the tests pass
+
+I ensured the change was minimal and reviewable, without refactoring unrelated code
+
+5) EXPLANATION.md
+
+I created an EXPLANATION.md (max 250 words) explaining:
+
+What the bug was
+
+Why it happened
+
+Why my fix resolves it
+
+One edge case my tests do not cover
+
+Submission
+
+I submitted this solution as a public GitHub repository using the Google Form link provided.
+
